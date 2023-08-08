@@ -14,12 +14,14 @@ import { createPost } from '../../api/api';
 const Form = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
-
   const [postData, setPostData] = useState({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createPost(postData));
   }
+ 
+
   const clear = () => {
 
   }
